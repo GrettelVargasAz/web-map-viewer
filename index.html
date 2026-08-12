@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Map Viewer</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+
+        <div class="sidebar-header">
+            <h1>VISOR CARTOGRÁFICO</h1>
+        </div>
+
+        <div class="sidebar-section">
+
+            <h2>Mapas base</h2>
+
+            <label>
+                <input type="radio"
+                       name="baseMap"
+                       value="osm"
+                       checked>
+                OpenStreetMap
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="baseMap"
+                       value="satellite">
+                Satélite
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="baseMap"
+                       value="topographic">
+                Topográfico
+            </label>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Map -->
+    <main id="map"></main>
+
+
+    <!-- Leaflet JavaScript -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/map.js"></script>
+
+</body>
+
+</html>
