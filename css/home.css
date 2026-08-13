@@ -1,1 +1,231 @@
+/* =========================================
+   GENERAL
+========================================= */
 
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    background: #000000;
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   LANDING PAGE
+========================================= */
+
+.landing-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 60px 20px;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.content {
+    width: 100%;
+    max-width: 430px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   COVER
+========================================= */
+
+.cover {
+    width: 100%;
+    height: 330px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 45px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #173c17 0%,
+            #071607 45%,
+            #000000 100%
+        );
+
+    border: 1px solid #173c17;
+}
+
+
+/* =========================================
+   COVER TEXT
+========================================= */
+
+.cover-small {
+    color: #53ff28;
+
+    font-size: 28px;
+    font-weight: 300;
+
+    letter-spacing: 3px;
+}
+
+
+.cover h1 {
+    margin: 8px 0;
+
+    color: #53ff28;
+
+    font-size: 44px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.cover-subtitle {
+    color: #b7ff9f;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.content h2 {
+    margin: 0 0 15px;
+
+    font-size: 27px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description {
+    margin: 0 auto;
+
+    max-width: 390px;
+
+    color: #eeeeee;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   TOPICS
+========================================= */
+
+.topics {
+    margin: 20px 0 30px;
+
+    color: #53ff28;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   MAIN BUTTON
+========================================= */
+
+.main-button {
+    display: block;
+
+    width: 100%;
+
+    padding: 15px 20px;
+
+    background: #39c900;
+
+    color: #071000;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    border: 1px solid #53ff28;
+    border-radius: 9px;
+
+    transition: 0.2s ease;
+}
+
+
+.main-button:hover {
+    background: #53ff28;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer-text {
+    margin-top: 28px;
+
+    color: #888888;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .landing-page {
+        padding: 30px 18px;
+    }
+
+    .cover {
+        height: 280px;
+        margin-bottom: 35px;
+    }
+
+    .cover-small {
+        font-size: 22px;
+    }
+
+    .cover h1 {
+        font-size: 36px;
+    }
+
+    .content h2 {
+        font-size: 23px;
+    }
+
+}
