@@ -120,6 +120,16 @@ body {
     font-size: 27px;
     font-weight: 700;
 }
+.author {
+    margin: -5px 0 18px;
+
+    color: #53ff28;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
 
 
 /* =========================================
