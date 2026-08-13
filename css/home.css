@@ -1,5 +1,5 @@
 /* =========================================
-   GENERAL
+   RESET
 ========================================= */
 
 * {
@@ -16,13 +16,12 @@ body {
 body {
     background: #000000;
     color: #ffffff;
-
     font-family: Arial, Helvetica, sans-serif;
 }
 
 
 /* =========================================
-   LANDING PAGE
+   PAGE
 ========================================= */
 
 .landing-page {
@@ -30,19 +29,18 @@ body {
 
     display: flex;
     justify-content: center;
-    align-items: flex-start;
 
-    padding: 60px 20px;
+    padding: 10px 20px 60px;
 }
 
 
 /* =========================================
-   MAIN CONTENT
+   CONTENT
 ========================================= */
 
 .content {
     width: 100%;
-    max-width: 430px;
+    max-width: 380px;
 
     text-align: center;
 }
@@ -53,25 +51,52 @@ body {
 ========================================= */
 
 .cover {
-    width: 100%;
-    height: 330px;
+    position: relative;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 320px;
+    height: 320px;
 
-    margin-bottom: 45px;
+    margin: 0 auto 35px;
+
+    overflow: hidden;
 
     background:
         radial-gradient(
-            circle at center,
-            #173c17 0%,
-            #071607 45%,
+            circle at 50% 40%,
+            #17451a 0%,
+            #0b2a0d 35%,
+            #031004 70%,
             #000000 100%
         );
+}
 
-    border: 1px solid #173c17;
+
+/* Dark satellite-like texture */
+
+.cover::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 25% 20%,
+            rgba(45, 120, 50, 0.55),
+            transparent 35%
+        ),
+        radial-gradient(
+            ellipse at 75% 30%,
+            rgba(20, 80, 25, 0.55),
+            transparent 40%
+        ),
+        radial-gradient(
+            ellipse at 55% 80%,
+            rgba(30, 100, 35, 0.45),
+            transparent 45%
+        );
+
+    opacity: 0.8;
 }
 
 
@@ -79,72 +104,107 @@ body {
    COVER TEXT
 ========================================= */
 
-.cover-small {
-    color: #53ff28;
+.cover-overlay {
+    position: absolute;
 
-    font-size: 28px;
+    inset: 0;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cover-name {
+    color: #4cff22;
+
+    font-size: 38px;
     font-weight: 300;
 
-    letter-spacing: 3px;
+    margin-bottom: 8px;
 }
 
 
 .cover h1 {
-    margin: 8px 0;
+    margin: 0;
 
-    color: #53ff28;
+    color: #39ff14;
 
-    font-size: 44px;
+    font-size: 40px;
     font-weight: 800;
 
-    letter-spacing: 1px;
-}
-
-
-.cover-subtitle {
-    color: #b7ff9f;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
+    white-space: nowrap;
 }
 
 
 /* =========================================
-   MAIN TITLE
+   INTRO
 ========================================= */
 
-.content h2 {
-    margin: 0 0 15px;
+.intro h2 {
+    margin: 0 0 12px;
 
-    font-size: 27px;
+    font-size: 25px;
     font-weight: 700;
 }
-.author {
-    margin: -5px 0 18px;
 
-    color: #53ff28;
+
+.description {
+    margin: 0;
+
+    font-size: 15px;
+    line-height: 1.55;
+
+    color: #eeeeee;
+}
+
+
+.author {
+    margin: 8px 0 28px;
 
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
 
-    letter-spacing: 1px;
+    color: #ffffff;
 }
 
 
 /* =========================================
-   DESCRIPTION
+   BUTTON
 ========================================= */
 
-.description {
-    margin: 0 auto;
+.main-button {
+    display: block;
 
-    max-width: 390px;
+    width: 100%;
 
-    color: #eeeeee;
+    padding: 14px 18px;
 
-    font-size: 16px;
-    line-height: 1.6;
+    background: #39d600;
+
+    border: 1px solid #4cff22;
+    border-radius: 9px;
+
+    color: #061000;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.main-button:hover {
+    background: #4cff22;
+
+    transform: translateY(-2px);
 }
 
 
@@ -153,61 +213,38 @@ body {
 ========================================= */
 
 .topics {
-    margin: 20px 0 30px;
+    margin: 22px 0;
 
-    color: #53ff28;
-
-    font-size: 13px;
-    font-weight: 600;
-}
-
-
-/* =========================================
-   MAIN BUTTON
-========================================= */
-
-.main-button {
-    display: block;
-
-    width: 100%;
-
-    padding: 15px 20px;
-
-    background: #39c900;
-
-    color: #071000;
-
-    text-decoration: none;
-
-    font-size: 15px;
-    font-weight: 700;
-
-    border: 1px solid #53ff28;
-    border-radius: 9px;
-
-    transition: 0.2s ease;
-}
-
-
-.main-button:hover {
-    background: #53ff28;
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-.footer-text {
-    margin-top: 28px;
-
-    color: #888888;
+    color: #bdbdbd;
 
     font-size: 12px;
-
     line-height: 1.5;
+}
+
+
+/* =========================================
+   LOWER TEXT
+========================================= */
+
+.quote {
+    margin-top: 65px;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    color: #ffffff;
+}
+
+
+.quote p {
+    margin-bottom: 7px;
+}
+
+
+.quote span {
+    font-weight: 700;
+
+    text-decoration: underline;
 }
 
 
@@ -215,26 +252,32 @@ body {
    MOBILE
 ========================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
 
     .landing-page {
-        padding: 30px 18px;
+        padding: 10px 18px 40px;
+    }
+
+    .content {
+        max-width: 100%;
     }
 
     .cover {
-        height: 280px;
-        margin-bottom: 35px;
+        width: 100%;
+        max-width: 320px;
+        aspect-ratio: 1 / 1;
+        height: auto;
     }
 
-    .cover-small {
-        font-size: 22px;
+    .cover-name {
+        font-size: 34px;
     }
 
     .cover h1 {
-        font-size: 36px;
+        font-size: 35px;
     }
 
-    .content h2 {
+    .intro h2 {
         font-size: 23px;
     }
 
