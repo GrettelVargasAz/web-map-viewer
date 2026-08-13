@@ -5,69 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Web Map Viewer</title>
+    <title>Geospatial Data Stories</title>
 
-    <!-- Leaflet CSS -->
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    >
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
 
-    <!-- Sidebar -->
-    <aside id="sidebar">
+    <main class="landing-page">
 
-        <div class="sidebar-header">
-            <h1>VISOR CARTOGRÁFICO</h1>
-        </div>
+        <section class="content">
 
-        <div class="sidebar-section">
+            <div class="cover">
 
-            <h2>Mapas base</h2>
+                <span class="cover-small">
+                    GEOSPATIAL
+                </span>
 
-            <label>
-                <input type="radio"
-                       name="baseMap"
-                       value="osm"
-                       checked>
-                OpenStreetMap
-            </label>
+                <h1>
+                    DATA STORIES
+                </h1>
 
-            <label>
-                <input type="radio"
-                       name="baseMap"
-                       value="satellite">
-                Satélite
-            </label>
+                <span class="cover-subtitle">
+                    GIS · REMOTE SENSING · WEB MAPPING
+                </span>
 
-            <label>
-                <input type="radio"
-                       name="baseMap"
-                       value="topographic">
-                Topográfico
-            </label>
+            </div>
 
-        </div>
+            <h2>
+                Geospatial Data & Mapping
+            </h2>
 
-    </aside>
+            <p class="description">
+                Exploración de datos geoespaciales,
+                sistemas de información geográfica,
+                teledetección y visualización cartográfica.
+            </p>
 
+            <p class="topics">
+                GIS · Remote Sensing · Google Earth Engine · Web Mapping
+            </p>
 
-    <!-- Map -->
-    <main id="map"></main>
+            <a href="map.html" class="main-button">
+                Explorar visor cartográfico
+            </a>
 
+            <p class="footer-text">
+                Interactive geospatial applications and data visualization
+            </p>
 
-    <!-- Leaflet JavaScript -->
-    <script
-        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
-    </script>
+        </section>
 
-    <!-- Custom JavaScript -->
-    <script src="js/map.js"></script>
+    </main>
 
 </body>
 
